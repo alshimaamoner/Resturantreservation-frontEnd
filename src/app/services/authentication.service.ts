@@ -78,18 +78,18 @@ export class AuthenticationService {
 
   // @ts-ignore
   showAvailableTable(): Observable<any>{
-    return this.httpClient.get('http://localhost:9092/tables/viewAvailbaleTable');
+    return this.httpClient.get('http://localhost:9092/resturant/tables');
 
   }
 
   // tslint:disable-next-line:typedef
-  addReservation(reservation: any, noOfPerson: any) {
-    const form = new FormData();
-    return this.httpClient.post('http://localhost:9092/reservation/add?', form);
+  addReservation(reservation: any) {
+ //   const form = new FormData();
+    return this.httpClient.post('http://localhost:9092//resturant/tables?', reservation);
   }
 
   // tslint:disable-next-line:typedef
   showReservation() {
-    return this.httpClient.get('http://localhost:9092/reservation/view');
+    return this.httpClient.get('http://localhost:9092/resturant/reservation');
   }
 }

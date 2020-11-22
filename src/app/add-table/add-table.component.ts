@@ -20,9 +20,10 @@ export class AddTableComponent implements OnInit {
   ngOnInit() {
   }
   // tslint:disable-next-line:typedef
-  add(table, noOfPerson){
+  add(noOfPerson){
     this.noOfPerson = noOfPerson;
-    this.loginservice.addReservation(table, noOfPerson).subscribe();
+    this.table.numberOfPersons = this.noOfPerson;
+    this.loginservice.addReservation(this.table).subscribe();
     alert('added');
   }
 

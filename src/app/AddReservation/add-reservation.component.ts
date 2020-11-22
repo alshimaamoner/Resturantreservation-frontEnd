@@ -22,7 +22,7 @@ ngOnInit() {
   // tslint:disable-next-line:typedef
   addReservation(reservation, noOfPerson){
   this.noOfPerson = noOfPerson;
-  this.loginservice.addReservation(reservation, noOfPerson).subscribe();
+  this.loginservice.addReservation(reservation).subscribe();
   alert('added');
   }
 }

@@ -25,13 +25,13 @@
         <section style="border: 2px solid darkgray; padding: 20px;">
           <form ngNativeValidate #form style="border: darkgray">
             <label style="color: darkgray">No Of Person  :</label>
-            <input type="number" class="form-control" id="noOfPerson" required>
+            <input type="number" class="form-control" id="noOfPerson" [(ngModel)]="table.numberOfPersons"  required>
             <!--        <small *ngIf="idValid" style="color: red;">Invalid ID. Please enter an id between 1 to 999.</small>-->
             <br>
 
             <br>
             <div class="col-md-6 offset-md-10">
-              <input  type="submit" class="confBtn btn btn-success" style=" margin-right: 20px;" value="Add">
+              <input  type="submit" class="confBtn btn btn-success" style=" margin-right: 20px;" value="Add" (click)="add(noOfPerson)">
               <input  type="submit" class="confBtn btn btn-danger" value="Cancel">
             </div>
 
