@@ -1,0 +1,52 @@
+<style>
+  .wrapper{
+    min-height: 90vh;
+  }
+  a{
+    color:  #FF8040;
+  }
+  button{
+    float: right;
+    margin-right:10px;
+  }
+
+</style>
+
+<div class="view" style="background-image: url('assets/bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+
+<div class="wrapper">
+
+    <div class="container ">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link " data-toggle="tab" href="reservation">ADD</a>
+      </li>
+    </ul>
+    <br><br>
+    <h3 class="font-weight-bold" style="color: gray">Show A vailable Table</h3>
+    <table border="1" class="table table-striped table-light">
+        <thead class="thead-light">
+            <tr class="table-light">
+                <th>Table Number</th>
+                <th>No Of Persons</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+      <tr>
+        <td>1</td>
+        <td>5</td>
+        <td>12 PM </td>
+        <tr *ngFor="let sf of table">
+<!--            <td>{{sf.}}</td>-->
+
+        </tr>
+        </table>
+      <button class="btn btn-danger" (click)="logOut()"> log Out </button>
+        <br>
+
+    </div>
+
+</div>
+</div>

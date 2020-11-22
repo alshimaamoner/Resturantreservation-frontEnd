@@ -1,0 +1,45 @@
+<style>
+  .wrapper{
+    min-height: 90vh;
+  }
+  a{
+    color:  #FF8040;
+  }
+
+</style>
+<div class="view" style="background-image: url('assets/bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <nav class="navbar navbar-dark">
+    <!--      <div class="navbar-brand">-->
+    <!--        <img src="assets/aeroplane.png" width="40" height="40" class="d-inline-block align-top" alt="">-->
+    <!--        <b>Flight Reservation System</b>-->
+    <!--    </div>-->
+
+  </nav>
+  <div class="wrapper">
+    <div class="container ">
+
+      <br><br>
+
+      <div class="container card shadow-lg p-3 mb-5 bg-white rounded">
+        <h3 class="font-weight-bold" style="color: darkgray">Book A Table  </h3>
+        <section style="border: 2px solid darkgray; padding: 20px;">
+          <form ngNativeValidate #form style="border: darkgray">
+            <label style="color: darkgray">No Of Person  :</label>
+            <input type="number" class="form-control" id="noOfPerson" required>
+            <!--        <small *ngIf="idValid" style="color: red;">Invalid ID. Please enter an id between 1 to 999.</small>-->
+            <br>
+
+            <br>
+            <div class="col-md-6 offset-md-10">
+              <input  type="submit" class="confBtn btn btn-success" style=" margin-right: 20px;" value="Add">
+              <input  type="submit" class="confBtn btn btn-danger" value="Cancel">
+            </div>
+
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="wrapper" style="background-image: url('assets/bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <div class="row">
+    <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+      <h3 style="margin-top: 20px; font-size: x-large;">Sign Up</h3>
+      <small>With an FRS account you can make bookings and manage
+        them quickly and easily.
+      </small>
+      <div class="row">
+        User Name : <input  class="form-control" type="text" name="username" [(ngModel)]="user.name">
+<!--        <small *ngIf="nameFlag" style="color: red;">Invalid User Name</small>-->
+      </div>
+      <div class="row">
+        Password : <input class="form-control" type="password" name="password" [(ngModel)]="user.password" #password="ngModel"
+                          minlength="5" maxlength="50" required>
+        <!-- <ng2-password-strength-bar [passwordToCheck]="user.userPassword" [barLabel]="barLabel" [barColors]="myColors"></ng2-password-strength-bar> -->
+<!--        <password-strength-meter [password]="user.userPassword" [minPasswordLength]=8 [colors]="barLabel"></password-strength-meter>-->
+      </div>
+      <div class="row">
+        Phone No : <input  class="form-control" type="number" name="phone" [(ngModel)]="user.phone">
+<!--        <small *ngIf="phoneFlag" style="color: red;">Invalid Phone Number</small>-->
+      </div>
+      <div class="row">
+        Email : <input  class="form-control" type="email" name="email" [(ngModel)]="user.email">
+<!--        <small *ngIf="emailFlag" style="color: red;">Invalid Email</small>-->
+      </div>
+      <div class="row">
+        <button  class="regBtn btn btn-success" (click)="signUp()">
+          Register
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<style>
+  #box{
+    width: 50%;
+    height: 50%;
+  }
+  #logout{
+    width: 60%;
+    margin-left:190%;
+    margin-right: 10%
+  }
+  button{
+    width: 60%;
+    margin-left:70%;
+    margin-right: 50%
+  }
+  #opacity-3 {
+  opacity:0.6!important;
+}
+
+</style>
+<div class="wrapper" style="background-image: url('assets/bg.jpg'); height: 100%; background-repeat: no-repeat; background-size: 100% 100%; background-position: center center;">
+
+
+  <div style="padding: 50px;" class="d-flex align-items-center justify-content-center">
+     <div class="shadow-lg p-3 mb-5 bg-dark rounded" id="box" style="opacity: 1;">
+      <div class="container">
+        <div class="row justify-content-center">
+            <h2  class="font-weight-bold" style="color: white">Welcome Admin!!</h2>
+        </div>
+      </div><br>
+      <div class="container">
+        <div class="content-center">
+            <div class="row">
+                <div class="col-sm-6" style="text-align: center;place-items: center;">
+                    <button type = "button" class = "btn btn-light" (click)="addTable()">Add Table</button><br><br>
+                    <button type = "button" class = "btn btn-light" (click)="viewReservation()">View Reservation</button><br><br>
+                  <br><br>
+                </div>
+
+        </div>
+    </div>
+  </div>
+       <div class="container">
+         <div class="content-center">
+           <div class="row">
+             <div class="col-sm-6" style="text-align: center;">
+
+               <br><br>  <br><br>
+               <br><br>  <br><br>
+               <nav class="navbar navbar-dark">
+
+                 <button type = "button" class ="btn btn-danger pull-right" id="logout" (click)="logout()">LOGOUT</button>
+               </nav>
+             </div>
+
+           </div>
+</div>
+</div>
+
+</div>
+  </div>
+</div>
