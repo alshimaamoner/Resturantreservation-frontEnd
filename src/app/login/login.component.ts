@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { User } from '../model/user.component';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication.service';
 import { ThrowStmt } from '@angular/compiler';
+import {log} from 'util';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,7 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class LoginComponent implements OnInit {
 
-  username = 'admin';
-  password = '';
-  user: User = new User();
+  @Input() user: User = new User();
   invalidLogin = false;
   private loginSuccess: boolean;
   private successMessage: string;
@@ -27,16 +26,17 @@ export class LoginComponent implements OnInit {
   // Check user for authenticatoin
   // tslint:disable-next-line:typedef
   checkLogin() {
-    this.loginservice.authenticate(this.username, this.password).subscribe((result) => {
-      this.invalidLogin = false;
-      this.loginSuccess = true;
-      this.successMessage = 'Login Successful.';
+    this.loginservice.authenticate(this.user.name, this.user.password).subscribe((result) => {
+      log.console('output' + result);
+      // this.invalidLogin = false;
+      // this.loginSuccess = true;
+      // this.successMessage = 'Login Successful.';
       this.router.navigate(['/viewTables']);
     }, () => {
       this.invalidLogin = true;
       this.loginSuccess = false;
     });
-    this.router.navigate(['/viewTables']);
+    // this.router.navigate(['/viewTables']);
   }
     // if (this.loginservice.authenticate(this.username, this.password)) {
     //   this.loginservice.getRole(this.username).subscribe((data: User) => {
@@ -69,6 +69,7 @@ redirect(){
     }
   }
 
+  // tslint:disable-next-line:typedef
   signup() {
     this.router.navigate(['signup']);
   }
